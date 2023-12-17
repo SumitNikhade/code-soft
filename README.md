@@ -1,1 +1,51 @@
 # code-soft
+ #Addition
+def add(x,y):  
+    return x+y
+#Subtraction
+def sub(x,y):
+    return x-y
+#Multiplication 
+def mul(x,y):
+    return x*y
+#Division 
+def div(x,y):
+    if y!=0:
+        return x/y
+    else:
+        return "Cannot Divide By Zero(0)" 
+
+def calculator():
+    try:
+        num1=float(input("Enter The First Number:-"))
+        num2=float(input("Enter The Second Number:-"))
+    except ValueError:
+        print("Invalide Input which you provide!!!!. Please enter valide numeric value.")
+        return
+    
+    print("\n\nSelect Operation:-")
+    print("\n 1. Addition (+):-")
+    print("\n 2. Subtraction (-):-")
+    print("\n 3. Multiplication (*):-")
+    print("\n 4. Division (/):-")
+
+    try:
+        select=int(input("Enter Your Choice(1/2/3/4):-"))
+    except ValueError:
+        print("Invalide Choice!!!!!")
+        return
+   if select==1:
+        result=add(num1,num2)
+        print("Result is:",num1,"+",num2,"=",result)
+    elif select==2:
+        result=sub(num1,num2)
+        print("Result is:",num1,"-",num2,"=",result)
+    elif select==3:
+        result=mul(num1,num2)
+        print("Result is:",num1,"*",num2,"=",result)
+    elif select==4:
+        result=div(num1,num2)
+        print("Result is:",num1,"/",num2,"=",result)
+    else:
+        print("Invalid Select!!!!")
+calculator()
