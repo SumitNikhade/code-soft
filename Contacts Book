@@ -1,0 +1,56 @@
+#contcts Book code
+contact={}
+def display_contact():
+    print("Name\t\tContact No")
+    for key in contact:
+        print("{}\t\t{}".format(key,contact.get(key)))
+
+while True:
+    choice= int(input("1.Add contact \n 2.Search Contact \n 3.Display Contact \n 4.Update Contact \n 5.Delete Contact \n Enter Your Choice:-"))
+    if choice==1:
+        name=input("Enter contact name:-")
+        phone=input("Enter phone no:-")
+        email=input("Enter email:-")
+        address=input("Enter address:-")
+        contact[name] = {'phone': phone, 'email': email, 'address': address}
+    elif choice==2:
+        search_name=input("Enter name or phone no:-")
+        if search_name in contact:
+            print(search_name,"\nFound contacts:-",contact[search_name])
+        else:
+           print("\nNo contact found..")
+        print()
+    elif choice==3:
+        if not contact:
+            print("Empty contact Book!!!")
+        else:
+            print(".....Contact list....")
+            display_contact()
+    elif choice==4:
+        update_contact=input("Enter contact to be updated:-")
+        if update_contact in contact:
+            phone=input("Enter Mobile No:-")
+            contact[update_contact] = {'phone': phone}
+            print("Contact Updated")
+            display_contact()
+        else:
+            print:("Name is Not Found!!")
+    elif choice==5:
+        del_contact=input("Enter Contact to be Delete:-")
+        if del_contact in contact:
+            confirm= input("Do you want to delete cantact y/n?")
+            if confirm.lower()=='y':
+                contact.pop(del_contact)
+                print("Contact deleted!!")
+            display_contact()
+        else:
+            print:("Name is Not Found!!")
+    elif choice==6:
+        break
+    else:
+        print("invalide choice")
+
+
+
+
+
