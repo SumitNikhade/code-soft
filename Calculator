@@ -1,5 +1,6 @@
-# code-soft
- #Addition
+#Calculator
+
+#Addition
 def add(x,y):  
     return x+y
 #Subtraction
@@ -28,13 +29,9 @@ def calculator():
     print("\n 2. Subtraction (-):-")
     print("\n 3. Multiplication (*):-")
     print("\n 4. Division (/):-")
-
-    try:
-        select=int(input("Enter Your Choice(1/2/3/4):-"))
-    except ValueError:
-        print("Invalide Choice!!!!!")
-        return
-   if select==1:
+    
+    select=int(input("Enter Your Choice(1/2/3/4):-"))
+    if select==1:
         result=add(num1,num2)
         print("Result is:",num1,"+",num2,"=",result)
     elif select==2:
