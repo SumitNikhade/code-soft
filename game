@@ -1,0 +1,21 @@
+#game (rock,paper,scissor)
+
+import random
+user_choice=int(input("Enter your choice: 0]Rock 1]Paper 2]Scissor:="))
+
+if user_choice>=3 or user_choice<0:
+    print("U entered invalid no..")
+else:
+    computer=random.randint(0,2)
+    print ("computer chose:-")
+    if computer==user_choice:
+        print("It's a draw.")
+    elif computer==0 and user_choice==2:
+        print("You Lose.")
+    elif computer==2 and user_choice==0:
+        print("You Win...")
+    elif computer > user_choice:
+        print("You Lose!!")
+    elif computer < user_choice:
+        print("You Win..!!!!")
+   
